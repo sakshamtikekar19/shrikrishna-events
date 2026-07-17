@@ -1,26 +1,176 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-background: #0A0908;
+  --color-background-secondary: #14110F;
+  --color-card: #14110F;
+  --color-royal-gold: #D4AF37;
+  --color-soft-gold: #C79B3B;
+  --color-champagne-gold: #E7D2A2;
+  --color-cream-marble: #F5EFE3;
+  --color-dark-bronze: #4D3826;
+  --color-accent: #D4AF37;
+  --color-secondary-text: #D5CBB7;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-heading: "Cormorant Garamond", serif;
+  --font-subheading: "Cinzel", serif;
+  --font-body: "Inter", sans-serif;
+  --font-button: "Manrope", sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+
+  --animate-gold-shimmer: gold-shimmer 3s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-particle-fade: particle-fade 4s ease-in-out infinite;
+
+  @keyframes gold-shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
   }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes particle-fade {
+    0%, 100% { opacity: 0.1; transform: translateY(0) scale(1); }
+    50% { opacity: 0.5; transform: translateY(-30px) scale(1.2); }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-33.333%); }
+  }
+
+  --animate-marquee: marquee 45s linear infinite;
+}
+
+:root {
+  --background: #0A0908;
+  --foreground: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-subheading);
+  letter-spacing: 0.05em;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #E7D2A2 50%, #C79B3B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: gold-shimmer 3s linear infinite;
+}
+
+.marble-texture {
+  background-image: url('https://www.transparenttextures.com/patterns/white-marble.png');
+  background-color: #F5EFE3;
+  color: #4D3826;
+}
+
+.glass-card {
+  background: rgba(20, 17, 15, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.royal-border {
+  position: relative;
+  border: 1px solid #D4AF37;
+}
+
+.royal-border::before, .royal-border::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #D4AF37;
+}
+
+.royal-border-tl::before { top: -2px; left: -2px; border-right: 0; border-bottom: 0; }
+.royal-border-tr::before { top: -2px; right: -2px; border-left: 0; border-bottom: 0; }
+.royal-border-bl::before { bottom: -2px; left: -2px; border-right: 0; border-top: 0; }
+.royal-border-br::before { bottom: -2px; right: -2px; border-left: 0; border-top: 0; }
+
+.luxury-button {
+  background: linear-gradient(135deg, #D4AF37 0%, #C79B3B 100%);
+  color: #0A0908;
+  font-family: var(--font-button);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 1.25rem 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.luxury-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+  letter-spacing: 0.15em;
+}
+
+.luxury-button-outline {
+  background: transparent;
+  color: #D4AF37;
+  border: 1px solid #D4AF37;
+  font-family: var(--font-button);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 1.25rem 3rem;
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.luxury-button-outline:hover {
+  background: #D4AF37;
+  color: #0A0908;
+  transform: translateY(-5px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee {
+    animation: none !important;
+  }
 }
