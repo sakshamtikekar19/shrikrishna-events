@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import { contactInfo } from "@/data/contact";
+import { getAssetPath } from "@/lib/seo";
 
 const journeyLinks = [
   { label: "About Us", href: "/about" },
@@ -19,7 +20,7 @@ export const Footer = () => {
           <div className="space-y-6">
             <Link href="/" className="relative h-11 w-40 flex items-center group">
               <Image
-                src="/logo.png"
+                src={getAssetPath("/logo.png")}
                 alt="Shree Krishna Event Management logo"
                 title="Shree Krishna Event Management"
                 fill

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/seo";
 
 export const Hero = () => {
   return (
@@ -10,31 +11,31 @@ export const Hero = () => {
       {/* Mobile: logo backdrop */}
       <div className="absolute inset-0 z-0 sm:hidden">
         <Image
-          src="/logo.png"
+          src={getAssetPath("/logo.png")}
           alt="Shree Krishna Event Management"
           fill
           priority
           sizes="100vw"
-          className="object-contain opacity-40 brightness-[1.1]"
+          className="object-contain opacity-60 brightness-[1.1]"
         />
       </div>
 
       {/* Desktop: palace scene */}
       <div className="absolute inset-0 z-0 hidden sm:block">
         <Image
-          src="/hero-bg.png"
+          src={getAssetPath("/hero-bg.png")}
           alt="Luxury palace-inspired backdrop"
           fill
           priority
           sizes="100vw"
-          quality={90}
-          className="object-cover object-center opacity-70 brightness-[1.1]"
+          quality={95}
+          className="object-cover object-center opacity-80 brightness-[1.1]"
         />
       </div>
 
-      {/* Optimized scrims for better visibility of the background images */}
-      <div className="absolute inset-0 z-10 bg-background/20" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/40 via-transparent to-background/40" />
+      {/* Very light scrims to ensure the background images are clearly visible */}
+      <div className="absolute inset-0 z-10 bg-background/10" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/30 via-transparent to-background/30" />
 
       <div className="relative z-20 w-full text-center container mx-auto px-5 sm:px-6 max-w-4xl pt-16 sm:pt-20 pb-16 flex flex-col items-center">
         <motion.div

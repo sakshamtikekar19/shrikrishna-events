@@ -11,6 +11,32 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ??
   "https://sakshamtikekar19.github.io/shrikrishna-events";
 
+/**
+ * Helper to get the correct asset path, especially for GitHub Pages subdirectories.
+ * On GitHub Pages, assets need to be prefixed with the repository name.
+ */
+export function getAssetPath(path: string): string {
+  if (!path) return "";
+  if (path.startsWith("http") || path.startsWith("data:") || path.startsWith("blob:")) {
+    return path;
+  }
+  
+  const repo = "shrikrishna-events";
+  const isGithubPages = typeof window !== "undefined" 
+    ? window.location.hostname.includes("github.io")
+    : process.env.GITHUB_PAGES === "true";
+
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+
+  if (isGithubPages) {
+    // Only prefix if it's not already prefixed
+    if (!cleanPath.startsWith(`/${repo}`)) {
+      return `/${repo}${cleanPath}`;
+    }
+  }
+  return cleanPath;
+}
+
 export const BUSINESS = {
   legalName: SITE_NAME,
   description:

@@ -5,6 +5,7 @@ import {
   SITE_TAGLINE,
   SITE_URL,
   absoluteUrl,
+  getAssetPath,
 } from "@/lib/seo";
 import { contactInfo } from "@/data/contact";
 
@@ -75,8 +76,8 @@ export function organizationSchema() {
     name: SITE_NAME,
     legalName: BUSINESS.legalName,
     url: SITE_URL,
-    logo: absoluteUrl("/logo.png"),
-    image: absoluteUrl("/hero-bg.png"),
+    logo: absoluteUrl(getAssetPath("/logo.png")),
+    image: absoluteUrl(getAssetPath("/hero-bg.png")),
     description: BUSINESS.description,
     slogan: SITE_TAGLINE,
     email: BUSINESS.email,
@@ -222,7 +223,7 @@ export function localBusinessExtras() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: SITE_NAME,
-    image: absoluteUrl("/logo.png"),
+    image: absoluteUrl(getAssetPath("/logo.png")),
     telephone: contactInfo.phones[0].tel,
     email: contactInfo.email,
     address: postalAddress(),

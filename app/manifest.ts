@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { BUSINESS, SITE_NAME, SITE_SHORT_NAME, SITE_URL } from "@/lib/seo";
+import { BUSINESS, SITE_NAME, SITE_SHORT_NAME, SITE_URL, getAssetPath } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
@@ -19,13 +19,13 @@ export default function manifest(): MetadataRoute.Manifest {
     id: SITE_URL,
     icons: [
       {
-        src: "/logo.png",
+        src: getAssetPath("/logo.png"),
         sizes: "192x192",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/logo.png",
+        src: getAssetPath("/logo.png"),
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",
