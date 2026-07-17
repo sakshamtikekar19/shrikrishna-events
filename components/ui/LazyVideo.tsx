@@ -8,10 +8,13 @@ type LazyVideoProps = {
   className?: string;
   playInView?: boolean;
   priority?: boolean;
+  title?: string;
+  alt?: string;
 };
 
 /**
  * Lazy cinematic video — loads near viewport, pauses off-screen.
+ * preload="metadata" (or none until near viewport) for Core Web Vitals.
  */
 export const LazyVideo = ({
   src,
@@ -19,6 +22,8 @@ export const LazyVideo = ({
   className = "",
   playInView = true,
   priority = false,
+  title,
+  alt = "",
 }: LazyVideoProps) => {
   const ref = useRef<HTMLVideoElement>(null);
   const [shouldLoad, setShouldLoad] = useState(priority);
@@ -59,10 +64,13 @@ export const LazyVideo = ({
       // eslint-disable-next-line @next/next/no-img-element
       <img
         src={poster}
-        alt=""
+        alt={alt || title || ""}
+        title={title}
         className={className}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
+        width={1280}
+        height={720}
       />
     );
   }
@@ -74,8 +82,10 @@ export const LazyVideo = ({
       loop
       playsInline
       autoPlay={priority && !reducedMotion}
-      preload={priority ? "metadata" : "none"}
+      preload="metadata"
       poster={poster}
+      title={title}
+      aria-label={title || alt || "Event highlight video"}
       className={`object-cover ${className}`}
     >
       {shouldLoad ? <source src={src} type="video/mp4" /> : null}

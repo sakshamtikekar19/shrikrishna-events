@@ -44,6 +44,7 @@ export const FeaturedVideos = () => {
                 <LazyVideo
                   src={item.video}
                   poster={item.poster}
+                  title={item.title}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 />
                 <div className="absolute inset-0 bg-background/30 group-hover:bg-background/45 transition-colors duration-400 flex items-center justify-center">

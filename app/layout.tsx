@@ -19,20 +19,12 @@ import { Preloader } from "@/components/ui/Preloader";
 import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { AnalyticsPlaceholders } from "@/components/seo/AnalyticsPlaceholders";
+import { rootMetadata } from "@/lib/seo";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
-  title: "Shree Krishna Event Management | Creating Divine Celebrations",
-  description:
-    "From luxury weddings and royal celebrations to large-scale corporate events, Shree Krishna Event Management transforms every vision into an unforgettable experience.",
-  keywords: [
-    "luxury weddings",
-    "royal celebrations",
-    "heritage events",
-    "premium production",
-    "Shree Krishna events",
-    "event management India",
-  ],
-};
+export const metadata: Metadata = rootMetadata;
 
 export default function RootLayout({
   children,
@@ -40,13 +32,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en-IN" className="dark scroll-smooth">
       <body className="bg-background text-foreground selection:bg-royal-gold selection:text-background font-body">
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        <AnalyticsPlaceholders />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-royal-gold focus:text-background focus:px-4 focus:py-2 focus:font-subheading focus:text-xs focus:uppercase focus:tracking-widest"
+        >
+          Skip to main content
+        </a>
         <Preloader />
         <SmoothScrollProvider>
           <CursorFollower />
           <Navbar />
-          <main className="relative w-full overflow-hidden bg-background min-h-screen">
+          <main
+            id="main-content"
+            className="relative w-full overflow-hidden bg-background min-h-screen"
+          >
             {children}
           </main>
           <Footer />

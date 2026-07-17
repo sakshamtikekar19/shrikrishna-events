@@ -34,7 +34,8 @@ export const Rentals = () => {
             >
               <Image
                 src={item.image}
-                alt={item.name}
+                alt={`${item.name} rental in Bhubaneswar — Shree Krishna Event Management`}
+                title={`${item.name} — Event rental Bhubaneswar`}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

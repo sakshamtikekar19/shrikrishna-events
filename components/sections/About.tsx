@@ -74,31 +74,40 @@ export const About = () => {
               <LazyVideo
                 src={media.about.video}
                 poster={media.about.poster}
+                title="About Shree Krishna Event Management"
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
             </div>
             <div className="grid grid-cols-2 gap-3">
-              <div className="relative h-[120px] sm:h-[140px] overflow-hidden border border-royal-gold/15">
+              <figure className="relative h-[120px] sm:h-[140px] overflow-hidden border border-royal-gold/15">
                 <Image
                   src={media.about.primary}
-                  alt="Client planning meeting"
+                  alt="Client consultation for wedding planning in Bhubaneswar"
+                  title="Wedding planning consultation — Shree Krishna Events"
                   fill
                   sizes="(max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
                   loading="lazy"
                 />
-              </div>
-              <div className="relative h-[120px] sm:h-[140px] overflow-hidden border border-royal-gold/15">
+                <figcaption className="sr-only">
+                  Client planning meeting at Shree Krishna Event Management
+                </figcaption>
+              </figure>
+              <figure className="relative h-[120px] sm:h-[140px] overflow-hidden border border-royal-gold/15">
                 <Image
                   src={media.about.secondary}
-                  alt="Event planning team"
+                  alt="Event planning team coordinating a luxury celebration"
+                  title="Event production team — Bhubaneswar, Odisha"
                   fill
                   sizes="(max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
                   loading="lazy"
                 />
-              </div>
+                <figcaption className="sr-only">
+                  Event planning team at Shree Krishna Event Management
+                </figcaption>
+              </figure>
             </div>
           </motion.div>
 

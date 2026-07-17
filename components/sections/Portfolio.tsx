@@ -70,7 +70,8 @@ export const Portfolio = () => {
               >
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} — ${project.category} event by Shree Krishna Event Management`}
+                  title={project.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -108,7 +109,8 @@ export const Portfolio = () => {
               <div className="relative w-full max-w-5xl h-[70vh]">
                 <Image
                   src={selectedImage}
-                  alt="Portfolio preview"
+                  alt="Enlarged portfolio gallery preview"
+                  title="Event portfolio gallery"
                   fill
                   sizes="90vw"
                   className="object-contain"

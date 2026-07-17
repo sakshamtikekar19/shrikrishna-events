@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { media } from "@/data/media";
 import { LazyVideo } from "@/components/ui/LazyVideo";
 
@@ -41,6 +42,7 @@ export const Services = () => {
                   <LazyVideo
                     src={service.video}
                     poster={service.image}
+                    title={`${service.title} — Shree Krishna Event Management`}
                     className="absolute inset-0 h-full w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
@@ -65,12 +67,12 @@ export const Services = () => {
                     {service.description}
                   </p>
                   <div className="pt-2">
-                    <a
-                      href="/contact"
+                    <Link
+                      href="/contact/"
                       className="luxury-button-outline inline-block px-8 py-3 text-[11px]"
                     >
                       Explore Details
-                    </a>
+                    </Link>
                   </div>
                 </motion.div>
               </div>

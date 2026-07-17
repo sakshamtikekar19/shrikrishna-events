@@ -42,8 +42,9 @@ export const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen((open) => !open);
 
   return (
-    <>
+    <header className="relative z-[1000]">
       <nav
+        aria-label="Primary"
         className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-700 ${
           isScrolled
             ? "py-3 sm:py-4 bg-background/90 border-b border-royal-gold/15"
@@ -54,7 +55,7 @@ export const Navbar = () => {
           {!isHome ? (
             <Link
               href="/"
-              className="relative w-10 h-10 flex items-center justify-center rounded-full border border-royal-gold/20 text-royal-gold hover:bg-royal-gold hover:text-background transition-all duration-300"
+              className="relative w-10 h-10 flex items-center justify-center rounded-full border border-royal-gold/20 text-royal-gold hover:bg-royal-gold hover:text-background transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-4"
               aria-label="Back to home"
             >
               <ArrowLeft size={18} strokeWidth={1.75} />
@@ -64,9 +65,12 @@ export const Navbar = () => {
           )}
 
           <button
+            type="button"
             onClick={toggleMenu}
-            className="relative w-10 h-10 flex items-center justify-center rounded-full border border-royal-gold/20 text-royal-gold hover:bg-royal-gold/10 transition-all duration-500 group"
+            className="relative w-10 h-10 flex items-center justify-center rounded-full border border-royal-gold/20 text-royal-gold hover:bg-royal-gold/10 transition-all duration-500 group focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-4"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="primary-navigation"
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             <span className="absolute inset-0 rounded-full border border-royal-gold scale-0 group-hover:scale-100 transition-transform duration-500 opacity-20" />
@@ -77,6 +81,10 @@ export const Navbar = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
+            id="primary-navigation"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site navigation"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -149,6 +157,6 @@ export const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </header>
   );
 };

@@ -62,7 +62,8 @@ export const Testimonials = () => {
                   <div className="relative w-12 h-12 overflow-hidden rounded-full border border-royal-gold/30 shrink-0">
                     <Image
                       src={testimonial.avatar}
-                      alt={testimonial.name}
+                      alt={`${testimonial.name}, ${testimonial.role}`}
+                      title={testimonial.name}
                       fill
                       sizes="48px"
                       className="object-cover"

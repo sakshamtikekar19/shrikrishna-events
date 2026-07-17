@@ -119,18 +119,20 @@ export const Contact = () => {
                   <span className="block text-[9px] uppercase tracking-[0.32em] text-champagne-gold/70 font-subheading mb-1">
                     Visit Us
                   </span>
-                  <a
-                    href={contactInfo.mapLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm md:text-base font-heading text-cream-marble hover:text-royal-gold transition-colors leading-relaxed block max-w-sm"
-                  >
-                    {contactInfo.address.line1}
-                    <br />
-                    {contactInfo.address.line2}
-                    <br />
-                    {contactInfo.address.city}
-                  </a>
+                  <address className="not-italic">
+                    <a
+                      href={contactInfo.mapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm md:text-base font-heading text-cream-marble hover:text-royal-gold transition-colors leading-relaxed block max-w-sm"
+                    >
+                      {contactInfo.address.line1}
+                      <br />
+                      {contactInfo.address.line2}
+                      <br />
+                      {contactInfo.address.city}
+                    </a>
+                  </address>
                 </div>
               </motion.div>
 

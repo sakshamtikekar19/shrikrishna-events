@@ -11,7 +11,8 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0 sm:hidden">
         <Image
           src="/logo.png"
-          alt=""
+          alt="Shree Krishna Event Management logo"
+          title="Shree Krishna Event Management — Bhubaneswar"
           fill
           priority
           sizes="100vw"
@@ -23,7 +24,8 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0 hidden sm:block">
         <Image
           src="/hero-bg.png"
-          alt=""
+          alt="Luxury palace-inspired backdrop for Shree Krishna Event Management in Bhubaneswar"
+          title="Luxury Event Management in Bhubaneswar, Odisha"
           fill
           priority
           sizes="100vw"
@@ -48,7 +50,7 @@ export const Hero = () => {
             Flawless Planning · Divine Execution
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.15] tracking-wide drop-shadow-[0_4px_28px_rgba(0,0,0,0.95)] [text-shadow:0_2px_20px_rgba(0,0,0,0.85)]">
-            Creating Divine Celebrations
+            Shree Krishna Event Management
           </h1>
         </motion.div>
 
@@ -58,8 +60,9 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="text-sm sm:text-base md:text-lg text-cream-marble max-w-2xl mx-auto mb-8 sm:mb-10 font-body leading-relaxed drop-shadow-[0_2px_16px_rgba(0,0,0,0.9)] [text-shadow:0_1px_12px_rgba(0,0,0,0.8)]"
         >
-          Transforming your vision into a royal masterpiece through exceptional
-          heritage planning and premium event production.
+          Creating divine celebrations as Bhubaneswar&apos;s luxury event
+          management company — weddings, corporate events, and premium
+          production across Odisha.
         </motion.p>
 
         <motion.div
