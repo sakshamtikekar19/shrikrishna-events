@@ -8,7 +8,7 @@ import { getAssetPath } from "@/lib/seo";
 export const Hero = () => {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden flex items-center justify-center bg-background">
-      {/* Mobile: logo backdrop */}
+      {/* Mobile: logo backdrop - using object-cover to fill entire screen without black areas */}
       <div className="absolute inset-0 z-0 sm:hidden">
         <Image
           src={getAssetPath("/logo.png")}
@@ -16,11 +16,11 @@ export const Hero = () => {
           fill
           priority
           sizes="100vw"
-          className="object-contain opacity-60 brightness-[1.1]"
+          className="object-cover opacity-40 brightness-[1.1]"
         />
       </div>
 
-      {/* Desktop: palace scene */}
+      {/* Desktop: palace scene - restored to original 62% opacity */}
       <div className="absolute inset-0 z-0 hidden sm:block">
         <Image
           src={getAssetPath("/hero-bg.png")}
@@ -28,14 +28,15 @@ export const Hero = () => {
           fill
           priority
           sizes="100vw"
-          quality={95}
-          className="object-cover object-center opacity-80 brightness-[1.1]"
+          quality={85}
+          className="object-cover object-center opacity-[0.62] brightness-[1.15] contrast-[1.05] saturate-[0.95]"
         />
       </div>
 
-      {/* Very light scrims to ensure the background images are clearly visible */}
-      <div className="absolute inset-0 z-10 bg-background/10" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/30 via-transparent to-background/30" />
+      {/* Restored scrims for better contrast and depth */}
+      <div className="absolute inset-0 z-10 bg-background/45 sm:bg-background/40" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/70 via-background/35 to-background/80" />
+      <div className="absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_center,rgba(10,9,8,0.55)_0%,rgba(10,9,8,0.25)_45%,rgba(10,9,8,0.55)_100%)]" />
 
       <div className="relative z-20 w-full text-center container mx-auto px-5 sm:px-6 max-w-4xl pt-16 sm:pt-20 pb-16 flex flex-col items-center">
         <motion.div
