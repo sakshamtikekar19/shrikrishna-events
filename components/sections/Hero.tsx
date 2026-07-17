@@ -3,20 +3,20 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/seo";
 
 export const Hero = () => {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden flex items-center justify-center bg-background">
-      {/* Mobile: stretch logo to fill screen — full mark visible, no crop */}
+      {/* Mobile: logo backdrop */}
       <div className="absolute inset-0 z-0 sm:hidden">
         <Image
           src="/logo.png"
-          alt="Shree Krishna Event Management logo"
-          title="Shree Krishna Event Management — Bhubaneswar"
+          alt="Shree Krishna Event Management"
           fill
           priority
           sizes="100vw"
-          className="object-fill opacity-[0.38] brightness-[1.1]"
+          className="object-contain opacity-40 brightness-[1.1]"
         />
       </div>
 
@@ -24,20 +24,18 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0 hidden sm:block">
         <Image
           src="/hero-bg.png"
-          alt="Luxury palace-inspired backdrop for Shree Krishna Event Management in Bhubaneswar"
-          title="Luxury Event Management in Bhubaneswar, Odisha"
+          alt="Luxury palace-inspired backdrop"
           fill
           priority
           sizes="100vw"
-          quality={75}
-          className="object-cover object-center opacity-[0.62] brightness-[1.15] contrast-[1.05] saturate-[0.95]"
+          quality={90}
+          className="object-cover object-center opacity-70 brightness-[1.1]"
         />
       </div>
 
-      {/* Stronger scrims for text contrast over busy palace logo */}
-      <div className="absolute inset-0 z-10 bg-background/45 sm:bg-background/40" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/70 via-background/35 to-background/80" />
-      <div className="absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_center,rgba(10,9,8,0.55)_0%,rgba(10,9,8,0.25)_45%,rgba(10,9,8,0.55)_100%)]" />
+      {/* Optimized scrims for better visibility of the background images */}
+      <div className="absolute inset-0 z-10 bg-background/20" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/40 via-transparent to-background/40" />
 
       <div className="relative z-20 w-full text-center container mx-auto px-5 sm:px-6 max-w-4xl pt-16 sm:pt-20 pb-16 flex flex-col items-center">
         <motion.div

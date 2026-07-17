@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import { contactInfo } from "@/data/contact";
+import { getAssetPath } from "@/lib/seo";
 
 const journeyLinks = [
   { label: "About Us", href: "/about" },
