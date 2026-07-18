@@ -77,7 +77,7 @@ export const Portfolio = () => {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300 flex flex-col justify-end items-center text-center p-5 sm:p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300 flex flex-col justify-end p-5 sm:p-6">
                   <span className="text-royal-gold font-subheading text-[9px] uppercase tracking-[0.3em] mb-1">
                     {project.category}
                   </span>

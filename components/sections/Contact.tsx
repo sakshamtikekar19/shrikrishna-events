@@ -35,37 +35,37 @@ export const Contact = () => {
     >
       <div className="absolute inset-0 z-[1] bg-[radial-gradient(ellipse_at_top_right,rgba(212,175,55,0.08),transparent_55%)] pointer-events-none" />
 
-      <div className="container mx-auto px-5 sm:px-6 max-w-4xl relative z-10 text-center">
-        <div className="flex flex-col items-center gap-16 md:gap-24">
-          <div className="space-y-12 w-full">
+      <div className="container mx-auto px-5 sm:px-6 max-w-6xl relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="space-y-8 lg:pt-2">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-5"
             >
-              <h2 className="text-3xl sm:text-5xl lg:text-7xl font-heading font-bold text-cream-marble leading-[1.15]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-cream-marble leading-[1.15]">
                 Book Your{" "}
                 <span className="gold-gradient-text italic">Dream</span> Event.
               </h2>
-              <p className="text-secondary-text text-sm md:text-lg font-body max-w-2xl mx-auto leading-relaxed">
+              <p className="text-secondary-text text-sm md:text-base font-body max-w-md leading-relaxed">
                 From heritage weddings to corporate summits — reach us in
                 Bhubaneswar and let&apos;s craft your celebration.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-10">
+            <div className="space-y-5">
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -12 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="flex flex-col items-center gap-4 group"
+                className="flex items-start gap-4 group"
               >
-                <div className="w-14 h-14 rounded-full border border-royal-gold/30 bg-royal-gold/5 flex items-center justify-center text-royal-gold shrink-0">
-                  <Phone size={22} strokeWidth={1.5} />
+                <div className="w-11 h-11 rounded-full border border-royal-gold/30 bg-royal-gold/5 flex items-center justify-center text-royal-gold shrink-0 mt-0.5">
+                  <Phone size={18} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <span className="block text-[10px] uppercase tracking-[0.32em] text-champagne-gold/70 font-subheading mb-2">
+                  <span className="block text-[9px] uppercase tracking-[0.32em] text-champagne-gold/70 font-subheading mb-1.5">
                     Call Us
                   </span>
                   <div className="flex flex-col gap-1">
@@ -83,17 +83,17 @@ export const Contact = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -12 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.06 }}
-                className="flex flex-col items-center gap-4 group"
+                className="flex items-start gap-4 group"
               >
-                <div className="w-14 h-14 rounded-full border border-royal-gold/30 bg-royal-gold/5 flex items-center justify-center text-royal-gold shrink-0">
-                  <Mail size={22} strokeWidth={1.5} />
+                <div className="w-11 h-11 rounded-full border border-royal-gold/30 bg-royal-gold/5 flex items-center justify-center text-royal-gold shrink-0">
+                  <Mail size={18} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <span className="block text-[10px] uppercase tracking-[0.32em] text-champagne-gold/70 font-subheading mb-2">
+                  <span className="block text-[9px] uppercase tracking-[0.32em] text-champagne-gold/70 font-subheading mb-1">
                     Email
                   </span>
                   <a
@@ -106,17 +106,17 @@ export const Contact = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -12 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.12 }}
-                className="flex flex-col items-center gap-4 group"
+                className="flex items-start gap-4 group"
               >
-                <div className="w-14 h-14 rounded-full border border-royal-gold/30 bg-royal-gold/5 flex items-center justify-center text-royal-gold shrink-0">
-                  <MapPin size={22} strokeWidth={1.5} />
+                <div className="w-11 h-11 rounded-full border border-royal-gold/30 bg-royal-gold/5 flex items-center justify-center text-royal-gold shrink-0 mt-0.5">
+                  <MapPin size={18} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <span className="block text-[10px] uppercase tracking-[0.32em] text-champagne-gold/70 font-subheading mb-2">
+                  <span className="block text-[9px] uppercase tracking-[0.32em] text-champagne-gold/70 font-subheading mb-1">
                     Visit Us
                   </span>
                   <address className="not-italic">
@@ -124,36 +124,38 @@ export const Contact = () => {
                       href={contactInfo.mapLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-base md:text-lg font-heading text-cream-marble hover:text-royal-gold transition-colors leading-relaxed block max-w-xs mx-auto"
+                      className="text-sm md:text-base font-heading text-cream-marble hover:text-royal-gold transition-colors leading-relaxed block max-w-sm"
                     >
                       {contactInfo.address.line1}
+                      <br />
+                      {contactInfo.address.line2}
                       <br />
                       {contactInfo.address.city}
                     </a>
                   </address>
                 </div>
               </motion.div>
-            </div>
 
-            <div className="flex flex-wrap justify-center items-center gap-5 mt-4">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366] hover:text-background transition-colors duration-300 text-xs font-button uppercase tracking-[0.15em]"
-              >
-                <FaWhatsapp size={20} />
-                Chat on WhatsApp
-              </a>
-              <a
-                href={contactInfo.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 border border-royal-gold/35 text-royal-gold hover:bg-royal-gold hover:text-background transition-colors duration-300 text-xs font-button uppercase tracking-[0.15em]"
-              >
-                <FaInstagram size={20} />
-                Instagram
-              </a>
+              <div className="flex flex-wrap items-center gap-3 mt-2">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-5 py-3 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366] hover:text-background transition-colors duration-300 text-xs font-button uppercase tracking-[0.15em]"
+                >
+                  <FaWhatsapp size={18} />
+                  Chat on WhatsApp
+                </a>
+                <a
+                  href={contactInfo.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-5 py-3 border border-royal-gold/35 text-royal-gold hover:bg-royal-gold hover:text-background transition-colors duration-300 text-xs font-button uppercase tracking-[0.15em]"
+                >
+                  <FaInstagram size={18} />
+                  Instagram
+                </a>
+              </div>
             </div>
           </div>
 
@@ -162,19 +164,19 @@ export const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-background/90 border border-royal-gold/20 p-8 sm:p-12 shadow-[0_24px_60px_rgba(0,0,0,0.45)] w-full max-w-2xl mx-auto"
+            className="relative bg-background/90 border border-royal-gold/20 p-7 sm:p-9 shadow-[0_24px_60px_rgba(0,0,0,0.45)]"
           >
-            <span className="pointer-events-none absolute top-0 left-0 w-8 h-8 border-t border-l border-royal-gold/60" />
-            <span className="pointer-events-none absolute top-0 right-0 w-8 h-8 border-t border-r border-royal-gold/60" />
-            <span className="pointer-events-none absolute bottom-0 left-0 w-8 h-8 border-b border-l border-royal-gold/60" />
-            <span className="pointer-events-none absolute bottom-0 right-0 w-8 h-8 border-b border-r border-royal-gold/60" />
+            <span className="pointer-events-none absolute top-0 left-0 w-5 h-5 border-t border-l border-royal-gold/60" />
+            <span className="pointer-events-none absolute top-0 right-0 w-5 h-5 border-t border-r border-royal-gold/60" />
+            <span className="pointer-events-none absolute bottom-0 left-0 w-5 h-5 border-b border-l border-royal-gold/60" />
+            <span className="pointer-events-none absolute bottom-0 right-0 w-5 h-5 border-b border-r border-royal-gold/60" />
 
-            <p className="text-xs uppercase tracking-[0.35em] text-champagne-gold font-subheading mb-10">
+            <p className="text-[10px] uppercase tracking-[0.35em] text-champagne-gold font-subheading mb-7">
               Royal Inquiry
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-6 text-left">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className={labelClass} htmlFor="contact-name">
                     Full Name

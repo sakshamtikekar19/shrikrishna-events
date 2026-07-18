@@ -41,31 +41,31 @@ export const Testimonials = () => {
         >
           {media.testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.name}>
-              <div className="h-full border border-royal-gold/15 bg-background/50 p-10 md:p-12 flex flex-col items-center text-center justify-between relative group">
+              <div className="h-full border border-royal-gold/15 bg-background/50 p-10 md:p-12 flex flex-col justify-between relative group">
                 <div className="absolute top-5 right-5 text-royal-gold/15">
                   <FaQuoteLeft size={36} />
                 </div>
 
-                <div className="relative z-10 space-y-6 flex flex-col items-center">
-                  <div className="flex gap-1 justify-center">
+                <div className="relative z-10 space-y-6">
+                  <div className="flex gap-1">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
                       <FaStar key={i} className="text-royal-gold" size={12} />
                     ))}
                   </div>
 
-                  <p className="text-cream-marble text-lg md:text-xl italic font-heading leading-relaxed max-w-lg mx-auto">
+                  <p className="text-cream-marble text-lg md:text-xl italic font-heading leading-relaxed">
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
                 </div>
 
-                <div className="mt-10 pt-6 border-t border-royal-gold/10 relative z-10 flex flex-col items-center gap-4 w-full">
-                  <div className="relative w-14 h-14 overflow-hidden rounded-full border border-royal-gold/30 shrink-0">
+                <div className="mt-10 pt-6 border-t border-royal-gold/10 relative z-10 flex items-center gap-4">
+                  <div className="relative w-12 h-12 overflow-hidden rounded-full border border-royal-gold/30 shrink-0">
                     <Image
                       src={testimonial.avatar}
                       alt={`${testimonial.name}, ${testimonial.role}`}
                       title={testimonial.name}
                       fill
-                      sizes="56px"
+                      sizes="48px"
                       className="object-cover"
                       loading="lazy"
                     />
