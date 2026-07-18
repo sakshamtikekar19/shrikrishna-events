@@ -45,7 +45,7 @@ export const Navbar = () => {
     <header className="relative z-[1000]">
       <nav
         aria-label="Primary"
-        className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-700 ${
+        className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-700 ${
           isScrolled
             ? "py-3 sm:py-4 bg-background/90 border-b border-royal-gold/15"
             : "py-4 sm:py-6 bg-transparent"

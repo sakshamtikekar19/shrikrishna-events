@@ -32,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className="dark scroll-smooth">
-      <body className="bg-background text-foreground selection:bg-royal-gold selection:text-background font-body">
+    <html lang="en-IN" className="dark scroll-smooth overflow-x-hidden">
+      <body className="bg-background text-foreground selection:bg-royal-gold selection:text-background font-body w-full max-w-full overflow-x-hidden">
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <AnalyticsPlaceholders />
         <a
@@ -48,7 +48,7 @@ export default function RootLayout({
           <Navbar />
           <main
             id="main-content"
-            className="relative w-full overflow-hidden bg-background min-h-screen"
+            className="relative w-full max-w-full overflow-hidden bg-background min-h-screen"
           >
             {children}
           </main>

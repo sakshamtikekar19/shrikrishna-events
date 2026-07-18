@@ -14,7 +14,7 @@ const journeyLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-background-secondary pt-20 pb-10 border-t border-royal-gold/10 relative overflow-hidden">
+    <footer className="w-full bg-background-secondary pt-20 pb-10 border-t border-royal-gold/10 relative overflow-hidden">
       <div className="container mx-auto px-5 sm:px-6 max-w-6xl relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-16">
           <div className="space-y-6">

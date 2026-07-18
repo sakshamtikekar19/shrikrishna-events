@@ -28,7 +28,7 @@ export const Preloader = () => {
         <motion.div
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-background"
+          className="fixed top-0 left-0 right-0 bottom-0 z-[10000] flex flex-col items-center justify-center bg-background"
         >
           <div className="relative flex flex-col items-center">
             <motion.div

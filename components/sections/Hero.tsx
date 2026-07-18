@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden flex items-center justify-center bg-background">
       {/* Mobile: logo backdrop - using object-cover to fill entire screen without black areas */}
-      <div className="absolute inset-0 z-0 sm:hidden">
+      <div className="absolute inset-0 left-0 right-0 z-0 sm:hidden">
         <Image
           src={getAssetPath("/logo.png")}
           alt="Shree Krishna Event Management"
@@ -21,7 +21,7 @@ export const Hero = () => {
       </div>
 
       {/* Desktop: palace scene - restored to original 62% opacity */}
-      <div className="absolute inset-0 z-0 hidden sm:block">
+      <div className="absolute inset-0 left-0 right-0 z-0 hidden sm:block">
         <Image
           src={getAssetPath("/hero-bg.png")}
           alt="Luxury palace-inspired backdrop"
@@ -34,9 +34,9 @@ export const Hero = () => {
       </div>
 
       {/* Restored scrims for better contrast and depth */}
-      <div className="absolute inset-0 z-10 bg-background/45 sm:bg-background/40" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/70 via-background/35 to-background/80" />
-      <div className="absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_center,rgba(10,9,8,0.55)_0%,rgba(10,9,8,0.25)_45%,rgba(10,9,8,0.55)_100%)]" />
+      <div className="absolute inset-0 left-0 right-0 z-10 bg-background/45 sm:bg-background/40" />
+      <div className="absolute inset-0 left-0 right-0 z-10 bg-gradient-to-b from-background/70 via-background/35 to-background/80" />
+      <div className="absolute inset-0 left-0 right-0 z-10 bg-[radial-gradient(ellipse_at_center,rgba(10,9,8,0.55)_0%,rgba(10,9,8,0.25)_45%,rgba(10,9,8,0.55)_100%)]" />
 
       <div className="relative z-20 w-full text-center container mx-auto px-5 sm:px-6 max-w-4xl pt-16 sm:pt-20 pb-16 flex flex-col items-center">
         <motion.div

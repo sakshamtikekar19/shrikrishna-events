@@ -96,7 +96,7 @@ export const Portfolio = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[2000] bg-background/95 flex items-center justify-center p-6 md:p-16"
+              className="fixed top-0 left-0 right-0 bottom-0 z-[2000] bg-background/95 flex items-center justify-center p-6 md:p-16"
               onClick={() => setSelectedImage(null)}
             >
               <button
