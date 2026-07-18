@@ -52,8 +52,8 @@ export const FeaturedVideos = () => {
                     <Play fill="currentColor" size={22} />
                   </div>
                 </div>
-                <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8">
-                  <h4 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-cream-marble tracking-wide drop-shadow-lg">
+                <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 text-center">
+                  <h4 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-cream-marble tracking-wide drop-shadow-lg mx-auto">
                     {item.title}
                   </h4>
                 </div>

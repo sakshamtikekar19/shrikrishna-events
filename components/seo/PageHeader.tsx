@@ -10,14 +10,14 @@ type PageHeaderProps = {
 
 export function PageHeader({ title, description, breadcrumbs }: PageHeaderProps) {
   return (
-    <header className="pt-24 sm:pt-28 pb-2 md:pb-4">
-      <div className="container mx-auto px-5 sm:px-8 max-w-6xl">
+    <header className="pt-24 sm:pt-28 pb-2 md:pb-4 text-center">
+      <div className="container mx-auto px-5 sm:px-8 max-w-6xl flex flex-col items-center">
         <Breadcrumbs items={breadcrumbs} />
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-cream-marble leading-tight max-w-4xl">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-cream-marble leading-tight max-w-4xl mx-auto">
           {title}
         </h1>
         {description ? (
-          <p className="mt-4 md:mt-5 text-secondary-text text-sm md:text-base leading-relaxed max-w-2xl">
+          <p className="mt-4 md:mt-5 text-secondary-text text-sm md:text-lg leading-relaxed max-w-2xl mx-auto">
             {description}
           </p>
         ) : null}

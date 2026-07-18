@@ -30,8 +30,8 @@ export function FaqSection() {
               key={faq.question}
               className="group border border-royal-gold/15 bg-background-secondary/40 open:border-royal-gold/35 transition-colors"
             >
-              <summary className="cursor-pointer list-none px-5 sm:px-6 py-5 flex items-start justify-between gap-4 font-heading text-lg sm:text-xl text-cream-marble focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-[-2px]">
-                <span>{faq.question}</span>
+              <summary className="cursor-pointer list-none px-5 sm:px-6 py-5 flex items-center justify-center text-center gap-4 font-heading text-lg sm:text-xl text-cream-marble focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-[-2px]">
+                <span className="flex-1 text-center pl-8">{faq.question}</span>
                 <span
                   aria-hidden
                   className="text-royal-gold shrink-0 transition-transform group-open:rotate-45 text-2xl leading-none"
@@ -39,7 +39,7 @@ export function FaqSection() {
                   +
                 </span>
               </summary>
-              <div className="px-5 sm:px-6 pb-6 text-secondary-text text-sm sm:text-base leading-relaxed">
+              <div className="px-5 sm:px-6 pb-6 text-secondary-text text-center text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
                 <p>{faq.answer}</p>
               </div>
             </details>

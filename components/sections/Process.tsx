@@ -54,7 +54,7 @@ export const Process = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 justify-items-center">
           {steps.map((step, idx) => (
             <motion.div
               key={step.title}
@@ -62,7 +62,7 @@ export const Process = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.45, delay: Math.min(idx * 0.05, 0.2) }}
-              className="border border-royal-gold/15 bg-background-secondary/60 p-8 md:p-10 group hover:border-royal-gold/35 transition-colors duration-300"
+              className="w-full border border-royal-gold/15 bg-background-secondary/60 p-8 md:p-10 group hover:border-royal-gold/35 transition-colors duration-300 text-center"
             >
               <span className="text-royal-gold/40 font-heading text-3xl md:text-4xl font-bold block mb-5 group-hover:text-royal-gold/70 transition-colors">
                 {step.number}
@@ -70,7 +70,7 @@ export const Process = () => {
               <h3 className="text-xl md:text-2xl font-heading font-bold text-cream-marble mb-4 group-hover:text-royal-gold transition-colors duration-300">
                 {step.title}
               </h3>
-              <p className="text-secondary-text text-sm md:text-[15px] leading-relaxed">
+              <p className="text-secondary-text text-sm md:text-[15px] leading-relaxed mx-auto max-w-xs">
                 {step.description}
               </p>
             </motion.div>

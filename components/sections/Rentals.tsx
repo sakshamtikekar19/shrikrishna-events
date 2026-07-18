@@ -43,13 +43,15 @@ export const Rentals = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-75 group-hover:opacity-90 transition-opacity duration-300" />
 
-              <div className="absolute inset-0 flex flex-col items-center justify-end p-6 pb-8">
-                <h3 className="text-xl md:text-2xl font-heading font-bold text-cream-marble text-center tracking-wide">
+              <div className="absolute inset-0 flex flex-col items-center justify-end p-6 pb-10 text-center">
+                <h3 className="text-xl md:text-2xl font-heading font-bold text-cream-marble text-center tracking-wide max-w-[80%]">
                   {item.name}
                 </h3>
-                <button className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 luxury-button-outline px-6 py-2 text-[9px] uppercase tracking-[0.25em]">
-                  Check Availability
-                </button>
+                <div className="mt-5 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                  <button className="luxury-button-outline px-8 py-2.5 text-[10px] uppercase tracking-[0.25em]">
+                    Check Availability
+                  </button>
+                </div>
               </div>
             </motion.div>
           ))}
