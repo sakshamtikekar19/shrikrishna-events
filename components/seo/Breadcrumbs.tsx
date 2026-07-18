@@ -7,19 +7,19 @@ type BreadcrumbsProps = {
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <nav aria-label="Breadcrumb" className="mb-8 md:mb-10">
-      <ol className="flex flex-wrap items-center gap-2 text-[10px] sm:text-xs uppercase tracking-[0.2em] font-subheading text-secondary-text/70">
+    <nav aria-label="Breadcrumb" className="mb-4">
+      <ol className="flex flex-wrap items-center gap-4 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-subheading text-secondary-text/50">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
-            <li key={item.path} className="flex items-center gap-2">
+            <li key={item.path} className="flex items-center gap-4">
               {index > 0 && (
-                <span aria-hidden className="text-royal-gold/40">
-                  /
+                <span aria-hidden className="text-royal-gold/20">
+                  •
                 </span>
               )}
               {isLast ? (
-                <span aria-current="page" className="text-royal-gold">
+                <span aria-current="page" className="text-royal-gold/80">
                   {item.name}
                 </span>
               ) : (

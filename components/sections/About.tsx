@@ -60,48 +60,48 @@ const Counter = ({
 
 export const About = () => {
   return (
-    <section id="about" className="py-16 md:py-28 bg-background-secondary relative overflow-hidden">
-      <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+    <section id="about" className="section-padding bg-background-secondary relative overflow-hidden">
+      <div className="premium-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="relative space-y-3"
+            transition={{ duration: 0.8 }}
+            className="relative space-y-4"
           >
-            <div className="relative h-[220px] sm:h-[280px] md:h-[320px] overflow-hidden border border-royal-gold/20">
+            <div className="relative h-[250px] sm:h-[350px] md:h-[450px] overflow-hidden border border-royal-gold/15 rounded-[18px]">
               <LazyVideo
                 src={media.about.video}
                 poster={media.about.poster}
                 title="About Shree Krishna Event Management"
                 className="absolute inset-0 h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <figure className="relative h-[120px] sm:h-[140px] overflow-hidden border border-royal-gold/15">
+            <div className="grid grid-cols-2 gap-4">
+              <figure className="relative h-[140px] sm:h-[180px] overflow-hidden border border-royal-gold/15 rounded-[12px]">
                 <Image
                   src={media.about.primary}
                   alt="Client consultation for wedding planning in Bhubaneswar"
                   title="Wedding planning consultation — Shree Krishna Events"
                   fill
                   sizes="(max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-1000 hover:scale-105"
                   loading="lazy"
                 />
                 <figcaption className="sr-only">
                   Client planning meeting at Shree Krishna Event Management
                 </figcaption>
               </figure>
-              <figure className="relative h-[120px] sm:h-[140px] overflow-hidden border border-royal-gold/15">
+              <figure className="relative h-[140px] sm:h-[180px] overflow-hidden border border-royal-gold/15 rounded-[12px]">
                 <Image
                   src={media.about.secondary}
                   alt="Event planning team coordinating a luxury celebration"
                   title="Event production team — Bhubaneswar, Odisha"
                   fill
                   sizes="(max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-1000 hover:scale-105"
                   loading="lazy"
                 />
                 <figcaption className="sr-only">
@@ -111,20 +111,20 @@ export const About = () => {
             </div>
           </motion.div>
 
-          <div className="space-y-8 md:space-y-10">
+          <div className="space-y-8 md:space-y-12">
             <motion.div
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="space-y-4"
+              className="space-y-6"
             >
-              <span className="text-royal-gold font-subheading text-[10px] uppercase tracking-[0.45em] block">
+              <span className="text-royal-gold font-subheading text-xs sm:text-sm uppercase tracking-[0.6em] block">
                 Our Heritage
               </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-cream-marble leading-tight">
+              <h2 className="text-cream-marble leading-[1.2]">
                 Crafting Royal Celebrations With Soul
               </h2>
-              <p className="text-secondary-text text-sm md:text-base leading-relaxed">
+              <p className="max-w-luxury opacity-80 text-[16px] md:text-[18px]">
                 Shree Krishna Event Management blends timeless Indian hospitality
                 with modern cinematic production — turning every occasion into a
                 divine, unforgettable experience.
@@ -132,10 +132,10 @@ export const About = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="grid grid-cols-2 gap-6 md:gap-8"
+              className="grid grid-cols-2 gap-8 md:gap-12"
             >
               {counters.map((item) => (
                 <Counter key={item.label} {...item} />

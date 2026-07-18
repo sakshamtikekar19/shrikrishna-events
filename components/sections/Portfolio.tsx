@@ -18,35 +18,36 @@ export const Portfolio = () => {
       : media.portfolio.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-16 md:py-28 bg-background relative overflow-hidden">
-      <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
+    <section id="portfolio" className="section-padding bg-background relative overflow-hidden">
+      <div className="premium-container">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10 md:mb-14"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16 md:mb-24"
         >
-          <span className="text-royal-gold font-subheading text-[10px] uppercase tracking-[0.5em] mb-3 block">
+          <span className="text-royal-gold font-subheading text-xs sm:text-sm uppercase tracking-[0.6em] mb-6 block">
             A Legacy of Excellence
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-heading font-bold text-cream-marble mb-8">
+          <h2 className="text-cream-marble mb-12">
             Our Portfolio
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-3 md:gap-6">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`relative px-4 py-2 font-subheading text-[9px] uppercase tracking-[0.2em] transition-colors duration-300 ${
+                className={`relative px-4 py-3 font-subheading text-[11px] uppercase tracking-[0.25em] transition-all duration-300 ${
                   activeCategory === cat
                     ? "text-royal-gold"
-                    : "text-secondary-text hover:text-royal-gold"
+                    : "text-secondary-text/60 hover:text-royal-gold"
                 }`}
               >
                 {cat}
                 <span
-                  className={`absolute -bottom-0.5 left-0 h-px bg-royal-gold transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-0 h-px bg-royal-gold transition-all duration-500 ${
                     activeCategory === cat ? "w-full" : "w-0"
                   }`}
                 />
@@ -55,17 +56,17 @@ export const Portfolio = () => {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {filteredProjects.map((project, idx) => (
               <motion.div
                 key={project.title}
                 layout
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                transition={{ duration: 0.35 }}
-                className="group relative h-[280px] sm:h-[340px] overflow-hidden cursor-pointer border border-royal-gold/15"
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.6, delay: idx * 0.05 }}
+                className="group relative h-[450px] sm:h-[550px] md:h-[650px] overflow-hidden cursor-pointer rounded-[24px] border border-royal-gold/10"
                 onClick={() => setSelectedImage(project.image)}
               >
                 <Image
@@ -73,15 +74,15 @@ export const Portfolio = () => {
                   alt={`${project.title} — ${project.category} event by Shree Krishna Event Management`}
                   title={project.title}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300 flex flex-col justify-end p-5 sm:p-6">
-                  <span className="text-royal-gold font-subheading text-[9px] uppercase tracking-[0.3em] mb-1">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 md:p-12">
+                  <span className="text-royal-gold font-subheading text-xs uppercase tracking-[0.4em] mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     {project.category}
                   </span>
-                  <h4 className="text-lg sm:text-xl font-heading font-bold text-cream-marble">
+                  <h4 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-cream-marble transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
                     {project.title}
                   </h4>
                 </div>

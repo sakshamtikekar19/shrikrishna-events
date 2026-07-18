@@ -51,29 +51,29 @@ export const Navbar = () => {
             : "py-4 sm:py-6 bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="premium-container flex items-center justify-between">
           {!isHome ? (
             <Link
               href="/"
-              className="relative w-10 h-10 flex items-center justify-center rounded-full border border-royal-gold/20 text-royal-gold hover:bg-royal-gold hover:text-background transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-4"
+              className="relative w-12 h-12 flex items-center justify-center rounded-full border border-royal-gold/15 text-royal-gold hover:bg-royal-gold hover:text-background transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-4 shadow-lg"
               aria-label="Back to home"
             >
-              <ArrowLeft size={18} strokeWidth={1.75} />
+              <ArrowLeft size={20} strokeWidth={1.5} />
             </Link>
           ) : (
-            <span className="w-10 h-10" aria-hidden />
+            <span className="w-12 h-12" aria-hidden />
           )}
 
           <button
             type="button"
             onClick={toggleMenu}
-            className="relative w-10 h-10 flex items-center justify-center rounded-full border border-royal-gold/20 text-royal-gold hover:bg-royal-gold/10 transition-all duration-500 group focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-4"
+            className="relative w-12 h-12 flex items-center justify-center rounded-full border border-royal-gold/15 text-royal-gold hover:bg-royal-gold/10 transition-all duration-500 group focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-4 shadow-lg"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
             aria-controls="primary-navigation"
           >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-            <span className="absolute inset-0 rounded-full border border-royal-gold scale-0 group-hover:scale-100 transition-transform duration-500 opacity-20" />
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <span className="absolute inset-0 rounded-full border border-royal-gold scale-0 group-hover:scale-100 transition-transform duration-700 opacity-20" />
           </button>
         </div>
       </nav>
@@ -90,6 +90,15 @@ export const Navbar = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[1500] bg-background flex flex-col items-center overflow-y-auto"
           >
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-8 right-8 z-[1600] w-12 h-12 rounded-full border border-royal-gold/20 flex items-center justify-center text-royal-gold hover:bg-royal-gold hover:text-background transition-all duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-4"
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
+
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/white-marble.png')] scale-150" />
             </div>
@@ -146,14 +155,6 @@ export const Navbar = () => {
                 </div>
               </div>
             </motion.div>
-
-            <button
-              onClick={toggleMenu}
-              className="absolute top-8 right-8 w-12 h-12 rounded-full border border-royal-gold/20 flex items-center justify-center text-royal-gold hover:bg-royal-gold hover:text-background transition-all duration-500"
-              aria-label="Close menu"
-            >
-              <X size={24} />
-            </button>
           </motion.div>
         )}
       </AnimatePresence>

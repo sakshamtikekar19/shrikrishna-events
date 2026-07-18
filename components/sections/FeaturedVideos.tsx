@@ -12,48 +12,48 @@ import "swiper/css/navigation";
 
 export const FeaturedVideos = () => {
   return (
-    <section className="py-16 md:py-28 bg-background relative overflow-hidden">
-      <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
+    <section className="section-padding bg-background relative overflow-hidden">
+      <div className="premium-container">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10 md:mb-14"
+          className="text-center mb-16 md:mb-24"
         >
-          <span className="text-royal-gold font-subheading text-[10px] uppercase tracking-[0.5em] mb-3 block">
+          <span className="text-royal-gold font-subheading text-xs sm:text-sm uppercase tracking-[0.6em] mb-6 block">
             Cinematic Highlights
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-heading font-bold text-cream-marble">
+          <h2 className="text-cream-marble leading-[1.15]">
             Our Stories
           </h2>
         </motion.div>
 
         <Swiper
           modules={[Navigation]}
-          spaceBetween={16}
+          spaceBetween={32}
           slidesPerView={1}
           navigation
           breakpoints={{
-            768: { slidesPerView: 1.15, spaceBetween: 24 },
+            1024: { slidesPerView: 1.25, spaceBetween: 48 },
           }}
-          className="featured-videos-swiper"
+          className="featured-videos-swiper !overflow-visible"
         >
           {media.featuredVideos.map((item) => (
             <SwiperSlide key={item.title}>
-              <div className="relative h-[260px] sm:h-[380px] md:h-[480px] overflow-hidden border border-royal-gold/15 group cursor-pointer">
+              <div className="relative h-[400px] sm:h-[500px] md:h-[650px] overflow-hidden rounded-[32px] border border-royal-gold/15 group cursor-pointer shadow-2xl">
                 <LazyVideo
                   src={item.video}
                   poster={item.poster}
                   title={item.title}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.05]"
                 />
-                <div className="absolute inset-0 bg-background/30 group-hover:bg-background/45 transition-colors duration-400 flex items-center justify-center">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border border-royal-gold/40 flex items-center justify-center text-royal-gold bg-background/40">
-                    <Play fill="currentColor" size={22} />
+                <div className="absolute inset-0 bg-background/20 group-hover:bg-background/40 transition-colors duration-500 flex items-center justify-center">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-royal-gold/30 flex items-center justify-center text-royal-gold bg-background/30 backdrop-blur-sm transform transition-transform duration-500 group-hover:scale-110">
+                    <Play fill="currentColor" size={32} />
                   </div>
                 </div>
-                <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8">
-                  <h4 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-cream-marble tracking-wide drop-shadow-lg">
+                <div className="absolute bottom-10 left-10 right-10 sm:bottom-16 sm:left-16">
+                  <h4 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-cream-marble tracking-wide drop-shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     {item.title}
                   </h4>
                 </div>

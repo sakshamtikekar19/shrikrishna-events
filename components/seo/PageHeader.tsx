@@ -10,21 +10,21 @@ type PageHeaderProps = {
 
 export function PageHeader({ title, description, breadcrumbs }: PageHeaderProps) {
   return (
-    <header className="pt-24 sm:pt-28 pb-2 md:pb-4">
-      <div className="container mx-auto px-5 sm:px-8 max-w-6xl">
+    <header className="pt-32 sm:pt-48 pb-12 md:pb-20">
+      <div className="premium-container flex flex-col">
         <Breadcrumbs items={breadcrumbs} />
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-cream-marble leading-tight max-w-4xl">
+        <h1 className="leading-[1.1] max-w-5xl mt-6">
           {title}
         </h1>
         {description ? (
-          <p className="mt-4 md:mt-5 text-secondary-text text-sm md:text-base leading-relaxed max-w-2xl">
+          <p className="mt-8 md:mt-10 max-w-luxury opacity-80">
             {description}
           </p>
         ) : null}
-        <p className="mt-6 text-[10px] uppercase tracking-[0.28em] font-subheading text-royal-gold/70">
+        <p className="mt-12 text-[11px] uppercase tracking-[0.4em] font-subheading text-royal-gold/60">
           <Link
             href="/contact/"
-            className="hover:text-royal-gold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-4"
+            className="hover:text-royal-gold transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-royal-gold focus-visible:outline-offset-8 border-b border-royal-gold/20 pb-1 hover:border-royal-gold"
           >
             Book a consultation in Bhubaneswar →
           </Link>

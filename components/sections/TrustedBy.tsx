@@ -14,25 +14,25 @@ export const TrustedBy = () => {
   const row = [...brands, ...brands, ...brands];
 
   return (
-    <section className="py-16 md:py-20 bg-background border-y border-royal-gold/5 overflow-hidden">
-      <div className="container mx-auto px-5 sm:px-6 mb-10 text-center">
-        <span className="text-[10px] uppercase tracking-[0.45em] text-royal-gold/50 font-button">
+    <section className="py-12 md:py-16 bg-background border-y border-royal-gold/5 overflow-hidden">
+      <div className="premium-container mb-8 text-center">
+        <span className="text-[10px] uppercase tracking-[0.5em] text-royal-gold/30 font-button">
           Trusted By Industry Leaders
         </span>
       </div>
 
       <div className="relative flex overflow-hidden">
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 sm:w-24 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 sm:w-24 bg-gradient-to-l from-background to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 sm:w-32 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 sm:w-32 bg-gradient-to-l from-background to-transparent" />
 
-        <div className="flex w-max animate-marquee will-change-transform">
+        <div className="flex w-max animate-marquee will-change-transform py-2">
           {row.map((brand, idx) => (
             <div
               key={`${brand.name}-${idx}`}
-              className="mx-8 sm:mx-14 flex items-center gap-3 sm:gap-4 opacity-30"
+              className="mx-10 sm:mx-16 flex items-center gap-3 sm:gap-4 opacity-15 hover:opacity-30 transition-opacity duration-700"
             >
               <brand.icon size={28} className="text-cream-marble shrink-0" />
-              <span className="text-sm sm:text-base font-heading font-bold text-cream-marble tracking-widest uppercase whitespace-nowrap">
+              <span className="text-sm sm:text-base font-heading font-bold text-cream-marble tracking-[0.2em] uppercase whitespace-nowrap">
                 {brand.name}
               </span>
             </div>

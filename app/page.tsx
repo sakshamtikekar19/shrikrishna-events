@@ -28,7 +28,7 @@ export default function Home() {
           faqSchema(),
         ]}
       />
-      <div className="flex flex-col gap-10 md:gap-16">
+      <div className="flex flex-col">
         <Hero />
         <TrustedBy />
         <WhyChooseUs />

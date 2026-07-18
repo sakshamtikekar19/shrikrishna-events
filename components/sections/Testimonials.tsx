@@ -12,28 +12,28 @@ import "swiper/css/pagination";
 
 export const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-28 md:py-40 bg-background-secondary relative overflow-hidden">
-      <div className="container mx-auto px-5 sm:px-8 max-w-6xl relative z-10">
+    <section id="testimonials" className="section-padding bg-background-secondary relative overflow-hidden">
+      <div className="premium-container relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-16 md:mb-24"
         >
-          <span className="text-royal-gold font-subheading text-[10px] uppercase tracking-[0.5em] mb-4 block">
+          <span className="text-royal-gold font-subheading text-xs sm:text-sm uppercase tracking-[0.6em] mb-4 block">
             Client Masterpieces
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-heading font-bold text-cream-marble">
+          <h2 className="text-cream-marble leading-[1.2]">
             Divine Words
           </h2>
         </motion.div>
 
         <Swiper
           modules={[Pagination, Autoplay]}
-          spaceBetween={28}
+          spaceBetween={30}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 7000, disableOnInteraction: true }}
+          autoplay={{ delay: 8000, disableOnInteraction: true }}
           breakpoints={{
             1024: { slidesPerView: 2, spaceBetween: 40 },
           }}
@@ -41,32 +41,32 @@ export const Testimonials = () => {
         >
           {media.testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.name}>
-              <div className="h-full border border-royal-gold/15 bg-background/50 p-10 md:p-12 flex flex-col justify-between relative group">
-                <div className="absolute top-5 right-5 text-royal-gold/15">
-                  <FaQuoteLeft size={36} />
+              <div className="premium-card h-full flex flex-col justify-between relative group hover:border-royal-gold/30 transition-all duration-500 p-8 sm:p-10">
+                <div className="absolute top-6 right-6 text-royal-gold/10 group-hover:text-royal-gold/20 transition-colors duration-500">
+                  <FaQuoteLeft size={40} />
                 </div>
 
                 <div className="relative z-10 space-y-6">
-                  <div className="flex gap-1">
+                  <div className="flex gap-1.5">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
                       <FaStar key={i} className="text-royal-gold" size={12} />
                     ))}
                   </div>
 
-                  <p className="text-cream-marble text-lg md:text-xl italic font-heading leading-relaxed">
+                  <p className="text-cream-marble italic font-heading leading-[1.6] max-w-[95%]" style={{ fontSize: 'clamp(18px, 2.5vw, 22px)' }}>
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
                 </div>
 
-                <div className="mt-10 pt-6 border-t border-royal-gold/10 relative z-10 flex items-center gap-4">
-                  <div className="relative w-12 h-12 overflow-hidden rounded-full border border-royal-gold/30 shrink-0">
+                <div className="mt-10 pt-8 border-t border-royal-gold/10 relative z-10 flex items-center gap-5">
+                  <div className="relative w-14 h-14 overflow-hidden rounded-full border border-royal-gold/20 shrink-0">
                     <Image
                       src={testimonial.avatar}
                       alt={`${testimonial.name}, ${testimonial.role}`}
                       title={testimonial.name}
                       fill
-                      sizes="48px"
-                      className="object-cover"
+                      sizes="56px"
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                     />
                   </div>
@@ -74,7 +74,7 @@ export const Testimonials = () => {
                     <h4 className="text-base md:text-lg font-heading font-bold text-royal-gold tracking-wide uppercase">
                       {testimonial.name}
                     </h4>
-                    <span className="text-secondary-text text-[9px] uppercase tracking-[0.25em] font-subheading block mt-0.5">
+                    <span className="text-secondary-text text-[10px] uppercase tracking-[0.3em] font-subheading block mt-1 opacity-60">
                       {testimonial.role}
                     </span>
                   </div>

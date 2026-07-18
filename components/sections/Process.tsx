@@ -43,34 +43,34 @@ const steps = [
 
 export const Process = () => {
   return (
-    <section id="process" className="py-28 md:py-40 bg-background relative overflow-hidden">
-      <div className="container mx-auto px-5 sm:px-8 max-w-6xl">
-        <div className="text-center mb-16 md:mb-20">
-          <span className="text-royal-gold font-subheading text-[10px] uppercase tracking-[0.5em] mb-4 block">
+    <section id="process" className="section-padding bg-background relative overflow-hidden">
+      <div className="premium-container">
+        <div className="text-center mb-16 md:mb-24">
+          <span className="text-royal-gold font-subheading text-xs sm:text-sm uppercase tracking-[0.6em] mb-4 block">
             The Masterpiece Journey
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-heading font-bold text-cream-marble">
+          <h2 className="text-cream-marble leading-[1.2]">
             Our Process
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {steps.map((step, idx) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.45, delay: Math.min(idx * 0.05, 0.2) }}
-              className="border border-royal-gold/15 bg-background-secondary/60 p-8 md:p-10 group hover:border-royal-gold/35 transition-colors duration-300"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: Math.min(idx * 0.1, 0.4) }}
+              className="premium-card group hover:border-royal-gold/30 transition-all duration-500 p-8 sm:p-10"
             >
-              <span className="text-royal-gold/40 font-heading text-3xl md:text-4xl font-bold block mb-5 group-hover:text-royal-gold/70 transition-colors">
+              <span className="text-royal-gold/30 font-heading text-3xl md:text-4xl font-bold block mb-6 group-hover:text-royal-gold/60 transition-colors">
                 {step.number}
               </span>
               <h3 className="text-xl md:text-2xl font-heading font-bold text-cream-marble mb-4 group-hover:text-royal-gold transition-colors duration-300">
                 {step.title}
               </h3>
-              <p className="text-secondary-text text-sm md:text-[15px] leading-relaxed">
+              <p className="opacity-70 text-[15px] md:text-[17px] leading-relaxed">
                 {step.description}
               </p>
             </motion.div>

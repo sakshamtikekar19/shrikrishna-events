@@ -38,17 +38,17 @@ export const Hero = () => {
       <div className="absolute inset-0 left-0 right-0 z-10 bg-gradient-to-b from-background/70 via-background/35 to-background/80" />
       <div className="absolute inset-0 left-0 right-0 z-10 bg-[radial-gradient(ellipse_at_center,rgba(10,9,8,0.55)_0%,rgba(10,9,8,0.25)_45%,rgba(10,9,8,0.55)_100%)]" />
 
-      <div className="relative z-20 w-full text-center container mx-auto px-5 sm:px-6 max-w-4xl pt-16 sm:pt-20 pb-16 flex flex-col items-center">
+      <div className="relative z-20 w-full text-center premium-container pt-32 sm:pt-40 pb-32 flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-5 sm:mb-6 w-full"
+          className="mb-8 sm:mb-12 w-full"
         >
-          <span className="text-royal-gold font-subheading text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.45em] sm:tracking-[0.55em] mb-3 sm:mb-4 block font-semibold drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+          <span className="text-royal-gold font-subheading text-xs sm:text-sm md:text-base uppercase tracking-[0.55em] mb-6 sm:mb-8 block font-semibold drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             Flawless Planning · Divine Execution
           </span>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.15] tracking-wide drop-shadow-[0_4px_28px_rgba(0,0,0,0.95)] [text-shadow:0_2px_20px_rgba(0,0,0,0.85)]">
+          <h1 className="text-white leading-[1.1] tracking-tight drop-shadow-[0_4px_32px_rgba(0,0,0,0.95)] [text-shadow:0_4px_30px_rgba(0,0,0,0.85)] max-w-[1200px] mx-auto">
             Shree Krishna Event Management
           </h1>
         </motion.div>
@@ -57,7 +57,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="text-sm sm:text-base md:text-lg text-cream-marble max-w-2xl mx-auto mb-8 sm:mb-10 font-body leading-relaxed drop-shadow-[0_2px_16px_rgba(0,0,0,0.9)] [text-shadow:0_1px_12px_rgba(0,0,0,0.8)]"
+          className="max-w-luxury mx-auto mb-12 sm:mb-16 font-body drop-shadow-[0_2px_16px_rgba(0,0,0,0.9)] [text-shadow:0_1px_12px_rgba(0,0,0,0.8)] opacity-90"
         >
           Creating divine celebrations as Bhubaneswar&apos;s luxury event
           management company — weddings, corporate events, and premium
@@ -68,17 +68,17 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full mt-4 sm:mt-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 w-full"
         >
           <Link
             href="/services"
-            className="luxury-button-outline w-full sm:w-auto min-w-0 sm:min-w-[200px] py-3.5 text-[11px] text-center"
+            className="luxury-button-outline w-full sm:w-auto min-w-[240px]"
           >
             Explore Services
           </Link>
           <Link
             href="/contact"
-            className="luxury-button-outline w-full sm:w-auto min-w-0 sm:min-w-[200px] py-3.5 text-[11px] text-center"
+            className="luxury-button-outline w-full sm:w-auto min-w-[240px]"
           >
             Book Consultation
           </Link>

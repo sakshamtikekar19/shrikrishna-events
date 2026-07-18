@@ -12,6 +12,20 @@
   --color-accent: #D4AF37;
   --color-secondary-text: #D5CBB7;
 
+  /* Premium Luxury Spacing & Layout */
+  --site-max-width: 1700px;
+  --section-spacing: clamp(80px, 10vw, 120px);
+  --section-padding-v: clamp(60px, 6vw, 80px);
+  --container-padding-x: clamp(24px, 5vw, 100px);
+
+  /* Premium Luxury Typography */
+  --font-size-hero: clamp(44px, 7vw, 100px);
+  --font-size-h2: clamp(32px, 5vw, 64px);
+  --font-size-h3: clamp(22px, 2.5vw, 28px);
+  --font-size-sub: clamp(16px, 1.8vw, 24px);
+  --font-size-body: clamp(15px, 1.2vw, 18px);
+  --line-height-luxury: 1.7;
+
   --font-heading: "Cormorant Garamond", serif;
   --font-subheading: "Cinzel", serif;
   --font-body: "Inter", sans-serif;
@@ -109,6 +123,17 @@ body {
 h1, h2, h3 {
   font-family: var(--font-heading);
   letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--font-size-hero); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+
+p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-luxury);
+  color: var(--color-secondary-text);
 }
 
 h4, h5, h6 {
@@ -165,38 +190,78 @@ h4, h5, h6 {
   color: #0A0908;
   font-family: var(--font-button);
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   border-radius: 0;
-  padding: 1.25rem 3rem;
+  height: clamp(58px, 6vw, 64px);
+  padding: 0 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .luxury-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
-  letter-spacing: 0.15em;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.25);
+  letter-spacing: 0.2em;
 }
 
 .luxury-button-outline {
   background: transparent;
   color: #D4AF37;
-  border: 1px solid #D4AF37;
+  border: 1px solid rgba(212, 175, 55, 0.4);
   font-family: var(--font-button);
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   border-radius: 0;
-  padding: 1.25rem 3rem;
-  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+  height: clamp(58px, 6vw, 64px);
+  padding: 0 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .luxury-button-outline:hover {
   background: #D4AF37;
   color: #0A0908;
-  transform: translateY(-5px);
+  border-color: #D4AF37;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+}
+
+.premium-card {
+  background: var(--color-background-secondary);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  padding: clamp(32px, 5vw, 48px);
+  border-radius: clamp(18px, 2vw, 24px);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-container {
+  width: 100%;
+  max-width: var(--site-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
+
+.section-padding {
+  padding-top: var(--section-padding-v);
+  padding-bottom: var(--section-padding-v);
+}
+
+.luxury-line-height {
+  line-height: var(--line-height-luxury);
+}
+
+.max-w-luxury {
+  max-width: 700px;
 }
 
 html {
