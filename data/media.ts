@@ -186,6 +186,42 @@ export const media = {
     background: unsplash("photo-1566073771259-6a8506099945", 1920), // luxury banquet / hotel
     venue: unsplash("photo-1464366400600-7168b8af9bc3", 1200), // elegant hall
   },
+
+  gallery: [
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.15 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.15 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.16 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.16 PM (2).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.16 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.17 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.17 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.18 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.18 PM (2).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.18 PM (3).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.18 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.19 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.19 PM (2).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.19 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.20 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.20 PM (2).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.20 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.21 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.21 PM (2).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.21 PM (3).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.21 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.22 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.50 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.50 PM (2).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.50 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.51 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.51 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.52 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.52 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.53 PM (1).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.53 PM (2).jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.53 PM.jpeg",
+    "/images/gallery/WhatsApp Image 2026-07-22 at 12.07.54 PM.jpeg",
+  ],
 } as const;
 
 export type MediaConfig = typeof media;

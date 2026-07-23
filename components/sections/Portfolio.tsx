@@ -4,13 +4,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { media } from "@/data/media";
 
 const categories = ["All", "Corporate", "Wedding", "Birthday", "Launch", "Decor"];
 
 export const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const router = useRouter();
 
   const filteredProjects =
     activeCategory === "All"
@@ -67,7 +68,7 @@ export const Portfolio = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.6, delay: idx * 0.05 }}
                 className="group relative h-[450px] sm:h-[550px] md:h-[650px] overflow-hidden cursor-pointer rounded-[24px] border border-royal-gold/10"
-                onClick={() => setSelectedImage(project.image)}
+                onClick={() => router.push("/gallery")}
               >
                 <Image
                   src={project.image}
@@ -85,42 +86,16 @@ export const Portfolio = () => {
                   <h4 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-cream-marble transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
                     {project.title}
                   </h4>
+                  <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
+                    <span className="inline-block px-6 py-2 border border-royal-gold/40 text-royal-gold text-[10px] uppercase tracking-[0.2em] rounded-full backdrop-blur-sm">
+                      View Full Gallery
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </AnimatePresence>
         </div>
-
-        <AnimatePresence>
-          {selectedImage && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed top-0 left-0 right-0 bottom-0 z-[2000] bg-background/95 flex items-center justify-center p-6 md:p-16"
-              onClick={() => setSelectedImage(null)}
-            >
-              <button
-                className="absolute top-8 right-8 text-cream-marble hover:text-royal-gold transition-colors"
-                onClick={() => setSelectedImage(null)}
-                aria-label="Close"
-              >
-                <X size={32} strokeWidth={1} />
-              </button>
-              <div className="relative w-full max-w-5xl h-[70vh]">
-                <Image
-                  src={selectedImage}
-                  alt="Enlarged portfolio gallery preview"
-                  title="Event portfolio gallery"
-                  fill
-                  sizes="90vw"
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </section>
   );

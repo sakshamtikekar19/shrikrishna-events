@@ -2,10 +2,13 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { media } from "@/data/media";
 import { LazyVideo } from "@/components/ui/LazyVideo";
 
 export const Services = () => {
+  const router = useRouter();
+
   return (
     <section id="services" className="section-padding bg-background relative overflow-hidden">
       <div className="premium-container">
@@ -37,7 +40,8 @@ export const Services = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8 }}
-                  className="w-full lg:w-1/2 relative h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden border border-royal-gold/15 rounded-[18px]"
+                  className="w-full lg:w-1/2 relative h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden border border-royal-gold/15 rounded-[18px] cursor-pointer"
+                  onClick={() => router.push("/gallery")}
                 >
                   <LazyVideo
                     src={service.video}

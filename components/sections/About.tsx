@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { media } from "@/data/media";
 import { LazyVideo } from "@/components/ui/LazyVideo";
 
@@ -59,6 +60,8 @@ const Counter = ({
 };
 
 export const About = () => {
+  const router = useRouter();
+
   return (
     <section id="about" className="section-padding bg-background-secondary relative overflow-hidden">
       <div className="premium-container">
@@ -70,7 +73,10 @@ export const About = () => {
             transition={{ duration: 0.8 }}
             className="relative space-y-4"
           >
-            <div className="relative h-[250px] sm:h-[350px] md:h-[450px] overflow-hidden border border-royal-gold/15 rounded-[18px]">
+            <div 
+              className="relative h-[250px] sm:h-[350px] md:h-[450px] overflow-hidden border border-royal-gold/15 rounded-[18px] cursor-pointer"
+              onClick={() => router.push("/gallery")}
+            >
               <LazyVideo
                 src={media.about.video}
                 poster={media.about.poster}
@@ -80,7 +86,10 @@ export const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <figure className="relative h-[140px] sm:h-[180px] overflow-hidden border border-royal-gold/15 rounded-[12px]">
+              <figure 
+                className="relative h-[140px] sm:h-[180px] overflow-hidden border border-royal-gold/15 rounded-[12px] cursor-pointer"
+                onClick={() => router.push("/gallery")}
+              >
                 <Image
                   src={media.about.primary}
                   alt="Client consultation for wedding planning in Bhubaneswar"
@@ -94,7 +103,10 @@ export const About = () => {
                   Client planning meeting at Shree Krishna Event Management
                 </figcaption>
               </figure>
-              <figure className="relative h-[140px] sm:h-[180px] overflow-hidden border border-royal-gold/15 rounded-[12px]">
+              <figure 
+                className="relative h-[140px] sm:h-[180px] overflow-hidden border border-royal-gold/15 rounded-[12px] cursor-pointer"
+                onClick={() => router.push("/gallery")}
+              >
                 <Image
                   src={media.about.secondary}
                   alt="Event planning team coordinating a luxury celebration"
