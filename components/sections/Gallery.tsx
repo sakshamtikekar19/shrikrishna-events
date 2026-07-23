@@ -5,6 +5,7 @@ import Image from "next/image";
 import { media } from "@/data/media";
 import { useState } from "react";
 import { X } from "lucide-react";
+import { getAssetPath } from "@/lib/seo";
 
 export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -67,7 +68,7 @@ export const Gallery = () => {
               onClick={() => setSelectedImage(image)}
             >
               <Image
-                src={image}
+                src={getAssetPath(image)}
                 alt={`Gallery image ${idx + 1} - Shree Krishna Event Management`}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -106,7 +107,7 @@ export const Gallery = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={selectedImage}
+              src={getAssetPath(selectedImage)}
               alt="Gallery Preview"
               fill
               className="object-contain"
