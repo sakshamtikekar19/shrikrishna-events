@@ -2,20 +2,20 @@
 
 import { PageHeader } from "@/components/seo/PageHeader";
 import { Gallery } from "@/components/sections/Gallery";
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { motion } from "framer-motion";
 
 export default function GalleryPage() {
+  const breadcrumbItems = [
+    { name: "Home", path: "/" },
+    { name: "Gallery", path: "/gallery" },
+  ];
+
   return (
     <main className="min-h-screen pt-20">
-      <div className="premium-container py-12">
-        <Breadcrumbs />
-      </div>
-
       <PageHeader
         title="Royal Gallery"
         description="Explore our visual journey of creating divine celebrations and grand executions."
-        badge="Moments"
+        breadcrumbs={breadcrumbItems}
       />
 
       <motion.div
