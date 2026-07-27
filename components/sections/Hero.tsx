@@ -5,13 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAssetPath } from "@/lib/seo";
 
+import { media } from "@/data/media";
+
 export const Hero = () => {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden flex items-center justify-center bg-background">
       {/* Mobile: logo backdrop - using object-cover to fill entire screen without black areas */}
       <div className="absolute inset-0 left-0 right-0 z-0 sm:hidden">
         <Image
-          src={getAssetPath("/logo.png")}
+          src={getAssetPath(media.hero.image)}
           alt="Shree Krishna Event Management"
           fill
           priority
@@ -23,7 +25,7 @@ export const Hero = () => {
       {/* Desktop: palace scene - restored to original 62% opacity */}
       <div className="absolute inset-0 left-0 right-0 z-0 hidden sm:block">
         <Image
-          src={getAssetPath("/hero-bg.png")}
+          src={getAssetPath(media.hero.image)}
           alt="Luxury palace-inspired backdrop"
           fill
           priority

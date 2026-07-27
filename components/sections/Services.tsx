@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { media } from "@/data/media";
 import { LazyVideo } from "@/components/ui/LazyVideo";
+import { getAssetPath } from "@/lib/seo";
 
 export const Services = () => {
   const router = useRouter();
@@ -44,8 +45,8 @@ export const Services = () => {
                   onClick={() => router.push("/gallery")}
                 >
                   <LazyVideo
-                    src={service.video}
-                    poster={service.image}
+                    src={getAssetPath(service.video)}
+                    poster={getAssetPath(service.image)}
                     title={`${service.title} — Shree Krishna Event Management`}
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
                   />

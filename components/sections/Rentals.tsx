@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { media } from "@/data/media";
 import { contactInfo } from "@/data/contact";
+import { getAssetPath } from "@/lib/seo";
 
 export const Rentals = () => {
   const handleInquiry = (itemName: string) => {
@@ -40,7 +41,7 @@ export const Rentals = () => {
               className="group relative h-[400px] sm:h-[450px] overflow-hidden rounded-[24px] border border-royal-gold/15 cursor-pointer shadow-2xl"
             >
               <Image
-                src={item.image}
+                src={getAssetPath(item.image)}
                 alt={`${item.name} rental in Bhubaneswar — Shree Krishna Event Management`}
                 title={`${item.name} — Event rental Bhubaneswar`}
                 fill

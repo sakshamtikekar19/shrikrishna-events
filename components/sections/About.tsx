@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { media } from "@/data/media";
 import { LazyVideo } from "@/components/ui/LazyVideo";
+import { getAssetPath } from "@/lib/seo";
 
 const counters = [
   { label: "Royal Events", value: 300, suffix: "+" },
@@ -78,8 +79,8 @@ export const About = () => {
               onClick={() => router.push("/gallery")}
             >
               <LazyVideo
-                src={media.about.video}
-                poster={media.about.poster}
+                src={getAssetPath(media.about.video)}
+                poster={getAssetPath(media.about.poster)}
                 title="About Shree Krishna Event Management"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -91,7 +92,7 @@ export const About = () => {
                 onClick={() => router.push("/gallery")}
               >
                 <Image
-                  src={media.about.primary}
+                  src={getAssetPath(media.about.primary)}
                   alt="Client consultation for wedding planning in Bhubaneswar"
                   title="Wedding planning consultation — Shree Krishna Events"
                   fill
@@ -108,7 +109,7 @@ export const About = () => {
                 onClick={() => router.push("/gallery")}
               >
                 <Image
-                  src={media.about.secondary}
+                  src={getAssetPath(media.about.secondary)}
                   alt="Event planning team coordinating a luxury celebration"
                   title="Event production team — Bhubaneswar, Odisha"
                   fill

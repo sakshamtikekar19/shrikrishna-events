@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import { media } from "@/data/media";
 import { LazyVideo } from "@/components/ui/LazyVideo";
+import { getAssetPath } from "@/lib/seo";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -42,8 +43,8 @@ export const FeaturedVideos = () => {
             <SwiperSlide key={item.title}>
               <div className="relative h-[400px] sm:h-[500px] md:h-[650px] overflow-hidden rounded-[32px] border border-royal-gold/15 group cursor-pointer shadow-2xl">
                 <LazyVideo
-                  src={item.video}
-                  poster={item.poster}
+                  src={getAssetPath(item.video)}
+                  poster={getAssetPath(item.poster)}
                   title={item.title}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.05]"
                 />

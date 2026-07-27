@@ -6,6 +6,7 @@ import { X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { media } from "@/data/media";
+import { getAssetPath } from "@/lib/seo";
 
 const categories = ["All", "Corporate", "Wedding", "Birthday", "Launch", "Decor"];
 
@@ -70,9 +71,9 @@ export const Portfolio = () => {
                 className="group relative h-[450px] sm:h-[550px] md:h-[650px] overflow-hidden cursor-pointer rounded-[24px] border border-royal-gold/10"
                 onClick={() => router.push("/gallery")}
               >
-                <Image
-                  src={project.image}
-                  alt={`${project.title} — ${project.category} event by Shree Krishna Event Management`}
+                  <Image
+                    src={getAssetPath(project.image)}
+                    alt={`${project.title} — ${project.category} event by Shree Krishna Event Management`}
                   title={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
