@@ -16,17 +16,17 @@ export const media = {
     /** Cinematic luxury venue — replace with client montage */
     video:
       "https://assets.mixkit.co/videos/preview/mixkit-luxury-wedding-venue-with-large-chandeliers-41132-large.mp4",
-    poster: unsplash("photo-1464366400600-7168b8af9bc3", 1920),
+    poster: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.15_PM.jpeg",
     /** Optional still if video fails / reduced motion */
-    image: unsplash("photo-1464366400600-7168b8af9bc3", 1920),
+    image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.15_PM.jpeg",
   },
 
   about: {
-    primary: unsplash("photo-1600880292203-757bb62b4baf", 1200), // client meeting
-    secondary: unsplash("photo-1552664730-d307ca884978", 1200), // planning team
+    primary: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.19_PM_2.jpeg", // client meeting
+    secondary: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.21_PM_1.jpeg", // planning team
     video:
       "https://assets.mixkit.co/videos/preview/mixkit-businessmen-discussing-work-around-a-laptop-42442-large.mp4",
-    poster: unsplash("photo-1556761175-b413da4baf72", 1200),
+    poster: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.19_PM_2.jpeg",
   },
 
   services: [
@@ -35,7 +35,7 @@ export const media = {
       title: "Luxury Weddings",
       description:
         "We turn your dream wedding into a royal masterpiece — heritage venues, mandap design, floral artistry, and flawless bridal entries.",
-      image: unsplash("photo-1583939003579-730e3918a45a", 1400), // Indian wedding couple
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.16_PM_1.jpeg", // Indian wedding couple
       video:
         "https://assets.mixkit.co/videos/preview/mixkit-luxury-wedding-venue-with-large-chandeliers-41132-large.mp4",
     },
@@ -44,7 +44,7 @@ export const media = {
       title: "Corporate Events",
       description:
         "Grand summits, award nights, and gala dinners executed with world-class technical production and high-stakes precision.",
-      image: unsplash("photo-1540575861501-7cf05a4b125a", 1400), // conference / gala
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.16_PM.jpeg", // conference / gala
       video:
         "https://assets.mixkit.co/videos/preview/mixkit-business-presentation-in-a-large-conference-room-42460-large.mp4",
     },
@@ -53,7 +53,7 @@ export const media = {
       title: "Brand Activations",
       description:
         "Product launches, influencer evenings, and mall activations that captivate elite audiences with cinematic flair.",
-      image: unsplash("photo-1492684223066-81342ee5ff30", 1400), // brand event / lights
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.17_PM.jpeg", // brand event / lights
       video:
         "https://assets.mixkit.co/videos/preview/mixkit-man-working-on-a-digital-screen-42439-large.mp4",
     },
@@ -62,7 +62,7 @@ export const media = {
       title: "Private Celebrations",
       description:
         "Intimate birthdays, anniversaries, and luxury private parties styled with the same royal care as our grandest events.",
-      image: unsplash("photo-1464349095431-e9a21285b5f3", 1400), // celebration cake / party
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.17_PM_1.jpeg", // celebration cake / party
       video:
         "https://assets.mixkit.co/videos/preview/mixkit-bright-fireworks-on-the-night-sky-41126-large.mp4",
     },
@@ -73,25 +73,25 @@ export const media = {
       title: "Luxury Wedding Showcase",
       video:
         "https://assets.mixkit.co/videos/preview/mixkit-luxury-wedding-venue-with-large-chandeliers-41132-large.mp4",
-      poster: unsplash("photo-1519741497674-611481863552", 1400),
+      poster: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.15_PM.jpeg",
     },
     {
       title: "Corporate Gala Night",
       video:
         "https://assets.mixkit.co/videos/preview/mixkit-business-presentation-in-a-large-conference-room-42460-large.mp4",
-      poster: unsplash("photo-1505373630572-2d1d4691bb02", 1400),
+      poster: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.18_PM_2.jpeg",
     },
     {
       title: "Stage & Concert Production",
       video:
         "https://assets.mixkit.co/videos/preview/mixkit-musical-band-performing-on-stage-41130-large.mp4",
-      poster: unsplash("photo-1470225620780-dba8ba36b745", 1400),
+      poster: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.16_PM_2.jpeg",
     },
     {
       title: "Grand Celebration",
       video:
         "https://assets.mixkit.co/videos/preview/mixkit-bright-fireworks-on-the-night-sky-41126-large.mp4",
-      poster: unsplash("photo-1531058021387-39322339d0d3", 1400),
+      poster: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.21_PM_2.jpeg",
     },
   ],
 
@@ -99,60 +99,60 @@ export const media = {
     {
       title: "Eternal Mandap Wedding",
       category: "Wedding",
-      image: unsplash("photo-1583939003579-730e3918a45a", 1200),
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.15_PM.jpeg",
     },
     {
       title: "Royal Floral Reception",
       category: "Wedding",
-      image: unsplash("photo-1520854221256-17451cc331bf", 1200),
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.53_PM.jpeg",
     },
     {
       title: "Maharaja Banquet Hall",
       category: "Decor",
-      image: unsplash("photo-1464366400600-7168b8af9bc3", 1200),
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.15_PM_1.jpeg",
     },
     {
       title: "Executive Summit Gala",
       category: "Corporate",
-      image: unsplash("photo-1540575861501-7cf05a4b125a", 1200),
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.16_PM.jpeg",
     },
     {
       title: "Award Night Stage",
       category: "Corporate",
-      image: unsplash("photo-1470225620780-dba8ba36b745", 1200),
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.18_PM_2.jpeg",
     },
     {
       title: "Golden Product Launch",
       category: "Launch",
-      image: unsplash("photo-1492684223066-81342ee5ff30", 1200),
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.17_PM.jpeg",
     },
     {
       title: "Heritage Birthday Soirée",
       category: "Birthday",
-      image: unsplash("photo-1464349095431-e9a21285b5f3", 1200),
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.17_PM_1.jpeg",
     },
     {
       title: "Bridal Entry Lights",
       category: "Wedding",
-      image: unsplash("photo-1519741497674-611481863552", 1200),
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.51_PM.jpeg",
     },
     {
       title: "Concert Stage Install",
       category: "Decor",
-      image: unsplash("photo-1459749411177-042180ce673f", 1200),
+      image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.16_PM_2.jpeg",
     },
   ],
 
   rentals: [
-    { name: "LED Walls", image: unsplash("photo-1470229722913-7c0e2dbb8a8b", 1000) },
-    { name: "Concert Lighting", image: unsplash("photo-1514525253344-7814d9994a81", 1000) },
-    { name: "Professional Sound", image: unsplash("photo-1516280440614-37939bbacd81", 1000) },
-    { name: "Stage Setup", image: unsplash("photo-1459749411177-042180ce673f", 1000) },
-    { name: "Truss Structures", image: unsplash("photo-1501281668745-f7f57925a1b4", 1000) },
-    { name: "Event Furniture", image: unsplash("photo-1567016432779-094069958ad5", 1000) },
-    { name: "Projection Mapping", image: unsplash("photo-1492684223066-81342ee5ff30", 1000) },
-    { name: "Cold Sparks", image: unsplash("photo-1531058021387-39322339d0d3", 1000) },
-    { name: "Celebratory FX", image: unsplash("photo-1530103043960-ef38714abb15", 1000) },
+    { name: "LED Walls", image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.19_PM.jpeg" },
+    { name: "Concert Lighting", image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.18_PM_1.jpeg" },
+    { name: "Professional Sound", image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.20_PM.jpeg" },
+    { name: "Stage Setup", image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.15_PM_1.jpeg" },
+    { name: "Truss Structures", image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.18_PM_3.jpeg" },
+    { name: "Event Furniture", image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.20_PM_1.jpeg" },
+    { name: "Projection Mapping", image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.18_PM.jpeg" },
+    { name: "Cold Sparks", image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.21_PM_2.jpeg" },
+    { name: "Celebratory FX", image: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.22_PM.jpeg" },
   ],
 
   testimonials: [
@@ -183,8 +183,8 @@ export const media = {
   ],
 
   contact: {
-    background: unsplash("photo-1566073771259-6a8506099945", 1920), // luxury banquet / hotel
-    venue: unsplash("photo-1464366400600-7168b8af9bc3", 1200), // elegant hall
+    background: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.54_PM.jpeg", // luxury banquet / hotel
+    venue: "/images/gallery/WhatsApp_Image_2026-07-22_12.07.50_PM_1.jpeg", // elegant hall
   },
 
   gallery: [
