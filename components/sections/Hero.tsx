@@ -13,7 +13,7 @@ export const Hero = () => {
       {/* Mobile: logo backdrop - using object-cover to fill entire screen without black areas */}
       <div className="absolute inset-0 left-0 right-0 z-0 sm:hidden">
         <Image
-          src={getAssetPath(media.hero.image)}
+          src={getAssetPath("/logo.png")}
           alt="Shree Krishna Event Management"
           fill
           priority
@@ -25,7 +25,7 @@ export const Hero = () => {
       {/* Desktop: palace scene - restored to original 62% opacity */}
       <div className="absolute inset-0 left-0 right-0 z-0 hidden sm:block">
         <Image
-          src={getAssetPath(media.hero.image)}
+          src={getAssetPath("/hero-bg.png")}
           alt="Luxury palace-inspired backdrop"
           fill
           priority
