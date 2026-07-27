@@ -60,7 +60,7 @@ export const Preloader = () => {
           </div>
 
           <div className="absolute bottom-10 text-[10px] text-accent/40 font-button uppercase tracking-[0.5em]">
-            © 2026 Shree Krishna Event Management
+            © 2024 Shree Krishna Event Management
           </div>
         </motion.div>
       )}

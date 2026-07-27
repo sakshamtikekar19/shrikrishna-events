@@ -108,7 +108,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-12 border-t border-royal-gold/10 flex flex-col md:flex-row items-center justify-between text-secondary-text/40 text-[11px] uppercase font-subheading tracking-[0.4em] gap-8">
-          <p>© 2026 Shree Krishna Event Management</p>
+          <p>© 2024 Shree Krishna Event Management</p>
           <div className="flex space-x-12">
             <Link href="/contact" className="hover:text-royal-gold transition-colors">
               Privacy Policy

@@ -38,7 +38,7 @@ export default function ContactPage() {
       <article className="pb-8">
         <PageHeader
           title="Contact Our Bhubaneswar Event Team"
-          description="Call +91 86589 88831 or visit Kesari Managrapoint Chowka, Near Indira Basanti Complex, Bhubaneswar, Odisha 751002."
+          description="Call +91 93373 00540 or visit Plot No 1970/7731, Third Floor, Kesura, Mangrajpoint, Near Indira Basanti Complex, Bhubaneswar, Odisha 751006."
           breadcrumbs={breadcrumbs}
         />
         <Contact />

@@ -43,16 +43,16 @@ export const BUSINESS = {
     "Luxury event management company in Bhubaneswar, Odisha — wedding planning, corporate events, brand activations, destination weddings, and premium event production.",
   category: "Event Management Company",
   type: "Luxury Event Management Company",
-  email: "info@shreekrishnaevents.com",
-  phones: ["+91-8658988831", "+91-9337300540"],
-  phoneDisplay: ["+91 86589 88831", "+91 93373 00540"],
+  email: "Shreekrishnaeventmanagement9@gmail.com",
+  phones: ["+91-9337300540", "+91-8658988831"],
+  phoneDisplay: ["+91 93373 00540", "+91 86589 88831"],
   address: {
-    streetAddress: "Kesari Managrapoint Chowka, Near Indira Basanti Complex",
+    streetAddress: "Plot No 1970/7731, Third Floor, Kesura, Mangrajpoint, Near Indira Basanti Complex",
     addressLocality: "Bhubaneswar",
     addressRegion: "Odisha",
-    postalCode: "751002",
+    postalCode: "751006",
     addressCountry: "IN",
-    full: "Kesari Managrapoint Chowka, Near Indira Basanti Complex, Bhubaneswar, Odisha 751002, India",
+    full: "Plot No 1970/7731, Third Floor, Kesura, Mangrajpoint, Near Indira Basanti Complex, Bhubaneswar, Odisha 751006, India",
   },
   geo: {
     // Approximate Bhubaneswar coordinates — update with exact pin when available
@@ -190,7 +190,7 @@ export const PAGES: Record<string, PageSeo> = {
   contact: {
     title: "Contact Wedding & Event Planner in Bhubaneswar | Book Consultation",
     description:
-      "Contact Shree Krishna Event Management in Bhubaneswar. Call +91 86589 88831 or visit Kesari Managrapoint Chowka near Indira Basanti Complex, Odisha 751002.",
+      "Contact Shree Krishna Event Management in Bhubaneswar. Call +91 93373 00540 or visit Kesura, Mangrajpoint near Indira Basanti Complex, Odisha 751006.",
     path: "/contact/",
     keywords: [
       "Event Management Company in Bhubaneswar",

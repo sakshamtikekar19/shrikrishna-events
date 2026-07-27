@@ -35,7 +35,7 @@ export const FAQS = [
   {
     question: "Where is your office located in Bhubaneswar?",
     answer:
-      "We are based at Kesari Managrapoint Chowka, Near Indira Basanti Complex, Bhubaneswar, Odisha 751002. Call +91 86589 88831 or +91 93373 00540 to book a consultation.",
+      "We are based at Plot No 1970/7731, Third Floor, Kesura, Mangrajpoint, Near Indira Basanti Complex, Bhubaneswar, Odisha 751006. Call +91 93373 00540 or +91 86589 88831 to book a consultation.",
   },
 ] as const;
 
